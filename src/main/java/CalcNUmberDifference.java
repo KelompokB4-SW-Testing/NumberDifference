@@ -38,7 +38,10 @@ public class CalcNUmberDifference {
 			group = 3;
 		}else if(diff>=11 && diff<50) { 
 			group = 2;
-		}else if(diff>=1 && diff<10){ 
+                // Bug Fixing
+                // Mengubah "diff<10" menjadi "diff<=10"
+                // Mohammad Rizky Maulidhan
+		}else if(diff>=1 && diff<=10){ 
 			group = 1;
 		}else {
 			group = 0;
@@ -50,8 +53,11 @@ public class CalcNUmberDifference {
 			message = message + "\nNon Group ";
 		}
 		
+                // Bug Fixing
+                // Menambahkan statement "break;" pada case 1
+                // Mohammad Rizky Maulidhan
 		switch(group) {
-			case 1: message = message + "Small Difference"; 
+			case 1: message = message + "Small Difference"; break;
 			case 2: message = message + "Medium Difference"; break;
 			case 3: message = message + "Large Differece"; break;
 			case 4: message = message + "There's no difference"; break;
