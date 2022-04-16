@@ -33,7 +33,7 @@ public class NumberDifferenceTest {
         /* Data Uji
            N = 11 
         */ 
-        
+ 
 	@Test
 	public void testInputNBilLuarRange_Upper() {
 		// (1) setup (arrange, build)
@@ -182,6 +182,7 @@ public class NumberDifferenceTest {
             assertEquals(expectedMessage, actualMessage);
 	}
 
+        /* TC 8 - 14 */
         //Test Case 8 Path 3 
         //Inputkan 2 angka membentuk group 3
         //PIC : Giusty Fadh Wiranapoera
