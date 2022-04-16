@@ -36,7 +36,10 @@ public class CalcNUmberDifference {
 		message = "Difference : " + diff; 
 		if(diff>50) {
 			group = 3;
-		}else if(diff>=11 && diff<50) { 
+                //Bug Fixing
+                // Mengubah "diff<50" menjadi "diff<=50"
+                //Giusty Fadh Wiranapoera
+		}else if(diff>=11 && diff<=50) { 
 			group = 2;
                 // Bug Fixing
                 // Mengubah "diff<10" menjadi "diff<=10"
