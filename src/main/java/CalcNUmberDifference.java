@@ -53,24 +53,20 @@ public class CalcNUmberDifference {
 		if(group>0){
 			message = message + "\nGroup " + group + ", ";
 		}else{
-                // Bug Fixing
-                // Menambahkan tanda koma setelah kata Non Group
-                // Andika Yudha Riyanto
-			message = message + "\nNon Group, ";
+			message = message + "\nNon Group ";
 		}
 		
                 // Bug Fixing
                 // Menambahkan statement "break;" pada case 1
                 // Mohammad Rizky Maulidhan
-                
-                // Mengubah Case 4 menjadi Case 0
-                // Andika Yudha Riyanto
-                
 		switch(group) {
 			case 1: message = message + "Small Difference"; break;
 			case 2: message = message + "Medium Difference"; break;
-			case 3: message = message + "Large Differece"; break;
-			case 0: message = message + "There's no difference"; break;
+                        //Bug Fixing
+                        //typo "Large Differece", menjadi "Large Difference"
+                        //Giusty Fadh Wiranapoera
+			case 3: message = message + "Large Difference"; break;
+			case 4: message = message + "There's no difference"; break;
 		}
 		
 		return message;
@@ -79,12 +75,8 @@ public class CalcNUmberDifference {
 	// function validasi nilai N sesuai dengan range valid, yaitu N berada pada range 1-10
 	// mengembalikan true, jika nilai N sesuai dengan range
 	// // sebaliknya mengembalikan false
-        
-        //Bug Fixing
-        // Mengubah operator OR menjadi operator AND
-        // Andika Yudha Riyanto
 	public boolean validateRangeInputMaxDeret(int nBil) {
-		if(nBil>=1 &&  nBil<=10) { 
+		if(nBil>=1 && nBil<=10) { 
 			return true;
 		}else {
 			return false;
