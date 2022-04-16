@@ -1,9 +1,6 @@
-package program.NumberDifference;
+package main.java;
 
-/**
- * Hello world!
- *
- */
+import main.java.NumberDifferenceFlow;
 public class App {
     public static void main(String[] args) {
     	NumberDifferenceFlow application = new NumberDifferenceFlow();

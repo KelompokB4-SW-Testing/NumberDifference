@@ -1,4 +1,4 @@
-package program.NumberDifference;
+package test.java;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -8,6 +8,7 @@ import static org.junit.Assert.*;
 import java.util.ArrayList;
 import java.util.Arrays;
 
+import main.java.*;
 import org.junit.Before;
 import org.junit.Test;
 
