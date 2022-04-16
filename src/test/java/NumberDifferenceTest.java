@@ -1,5 +1,8 @@
 package program.NumberDifference;
 
+import java.util.ArrayList;
+import java.util.Arrays;
+
 import static org.junit.Assert.*;
 
 import java.util.ArrayList;
@@ -65,6 +68,7 @@ public class NumberDifferenceTest {
 		// (3) verify (assert, check)
 		assertEquals(expected, actual);
 	}
+<<<<<<< Updated upstream
            
         // TC 3 : Nilai N berada di luar range bernilai negatif 
         // PIC : Andika Yudha Riyanto
@@ -181,4 +185,177 @@ public class NumberDifferenceTest {
 	}
 
 
+=======
+        
+        /* TC 15 - TC21 */
+        
+        // TC 15     : Group 2, Medium DIfference, 2x loop
+        // PIC       : Mohammad Rizky Maulidhan
+        /* Test Data :
+            N = 3
+            Number Series = 1 1 25
+        */
+        @Test
+	public void testDifferenceGroup2_2xloop() {
+		// (1) setup (arrange, build)
+                ArrayList<Integer> testData = new ArrayList<>(Arrays.asList(1,1,25));
+		
+                // Expected Result
+                String expectedMessage = "Difference : 24\nGroup 2, Medium Difference";
+                Integer expectedDifference = 24;
+                
+                // Exercise
+                Integer actualDifference = sut.numberDiffirenceProcess(testData);
+                String actualMessage = sut.groupingDifference(actualDifference);
+                		
+		// Verify Test
+                assertEquals(expectedDifference, actualDifference);
+                assertEquals(expectedMessage, actualMessage);
+	}
+        
+        // TC 16     : Group 2, Medium DIfference, 5x loop
+        // PIC       : Mohammad Rizky Maulidhan
+        /* Test Data :
+            N = 6
+            Number Series = 1 1 1 1 1 25
+        */
+        @Test
+	public void testDifferenceGroup2_5xloop() {
+		// (1) setup (arrange, build)
+                ArrayList<Integer> testData = new ArrayList<>(Arrays.asList(1,1,1,1,1,25));
+		
+                // Expected Result
+                String expectedMessage = "Difference : 24\nGroup 2, Medium Difference";
+                Integer expectedDifference = 24;
+                
+                // Exercise
+                Integer actualDifference = sut.numberDiffirenceProcess(testData);
+                String actualMessage = sut.groupingDifference(actualDifference);
+                		
+		// Verify Test
+                assertEquals(expectedDifference, actualDifference);
+                assertEquals(expectedMessage, actualMessage);
+	}
+        
+        // TC 17     : Group 1, Small DIfference, 1x loop
+        // PIC       : Mohammad Rizky Maulidhan
+        /* Test Data :
+            N = 2
+            Number Series = 1 5
+        */
+        @Test
+	public void testDifferenceGroup1_1xloop() {
+		// (1) setup (arrange, build)
+                ArrayList<Integer> testData = new ArrayList<>(Arrays.asList(1,5));
+		
+                // Expected Result
+                String expectedMessage = "Difference : 4\nGroup 1, Small Difference";
+                Integer expectedDifference = 4;
+                
+                // Exercise
+                Integer actualDifference = sut.numberDiffirenceProcess(testData);
+                String actualMessage = sut.groupingDifference(actualDifference);
+                		
+		// Verify Test
+                assertEquals(expectedDifference, actualDifference);
+                assertEquals(expectedMessage, actualMessage);
+	}
+        
+        // TC 18     : Group 1, Small DIfference, 1x loop, Batas atas (10)
+        // PIC       : Mohammad Rizky Maulidhan
+        /* Test Data :
+            N = 2
+            Number Series = 1 11
+        */
+        @Test
+	public void testDifferenceGroup1_1xloop_Upper() {
+		// (1) setup (arrange, build)
+                ArrayList<Integer> testData = new ArrayList<>(Arrays.asList(1,11));
+		
+                // Expected Result
+                String expectedMessage = "Difference : 10\nGroup 1, Small Difference";
+                Integer expectedDifference = 10;
+                
+                // Exercise
+                Integer actualDifference = sut.numberDiffirenceProcess(testData);
+                String actualMessage = sut.groupingDifference(actualDifference);
+                		
+		// Verify Test
+                assertEquals(expectedDifference, actualDifference);
+                assertEquals(expectedMessage, actualMessage);
+	}
+        
+        // TC 19     : Group 1, Small DIfference, 1x loop, Batas bawah (1)
+        // PIC       : Mohammad Rizky Maulidhan
+        /* Test Data :
+            N = 2
+            Number Series = 1 2
+        */
+        @Test
+	public void testDifferenceGroup1_1xloop_Lower() {
+		// (1) setup (arrange, build)
+                ArrayList<Integer> testData = new ArrayList<>(Arrays.asList(1,2));
+		
+                // Expected Result
+                String expectedMessage = "Difference : 1\nGroup 1, Small Difference";
+                Integer expectedDifference = 1;
+                
+                // Exercise
+                Integer actualDifference = sut.numberDiffirenceProcess(testData);
+                String actualMessage = sut.groupingDifference(actualDifference);
+                		
+		// Verify Test
+                assertEquals(expectedDifference, actualDifference);
+                assertEquals(expectedMessage, actualMessage);
+	}
+        
+        // TC 20     : Group 1, Small DIfference, 2x loop
+        // PIC       : Mohammad Rizky Maulidhan
+        /* Test Data :
+            N = 3
+            Number Series = 1 1 5
+        */
+        @Test
+	public void testDifferenceGroup1_2xloop() {
+		// (1) setup (arrange, build)
+                ArrayList<Integer> testData = new ArrayList<>(Arrays.asList(1,1,5));
+		
+                // Expected Result
+                String expectedMessage = "Difference : 4\nGroup 1, Small Difference";
+                Integer expectedDifference = 4;
+                
+                // Exercise
+                Integer actualDifference = sut.numberDiffirenceProcess(testData);
+                String actualMessage = sut.groupingDifference(actualDifference);
+                		
+		// Verify Test
+                assertEquals(expectedDifference, actualDifference);
+                assertEquals(expectedMessage, actualMessage);
+	}
+        
+        // TC 21     : Group 1, Small DIfference, 5x loop
+        // PIC       : Mohammad Rizky Maulidhan
+        /* Test Data :
+            N = 6
+            Number Series = 1 1 1 1 1 5
+        */
+        @Test
+	public void testDifferenceGroup1_5xloop() {
+		// (1) setup (arrange, build)
+                ArrayList<Integer> testData = new ArrayList<>(Arrays.asList(1,1,1,1,1,5));
+		
+                // Expected Result
+                String expectedMessage = "Difference : 4\nGroup 1, Small Difference";
+                Integer expectedDifference = 4;
+                
+                // Exercise
+                Integer actualDifference = sut.numberDiffirenceProcess(testData);
+                String actualMessage = sut.groupingDifference(actualDifference);
+                		
+		// Verify Test
+                assertEquals(expectedDifference, actualDifference);
+                assertEquals(expectedMessage, actualMessage);
+	}
+        
+>>>>>>> Stashed changes
 }
