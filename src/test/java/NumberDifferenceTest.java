@@ -20,13 +20,16 @@ public class NumberDifferenceTest {
 	public void setUp() throws Exception {
 		sut = new CalcNUmberDifference();
 	}
-
+        /* TC 1 - 7 */
+        
+        // TC 1 : Nilai N berada di luar range melebihi batas atas 
+        // PJ : Andika Yudha Riyanto
 	@Test
-	public void testInputNBilLuarRange_01() {
+	public void testInputNBilLuarRange_Upper() {
 		// (1) setup (arrange, build)
 		int jumlahDeretBil;
 		boolean actual, expected;
-		jumlahDeretBil = 15; // bukan berada pada range 1-10
+		jumlahDeretBil = 11; // bukan berada pada range 1-10
 		expected = false;
 		
 		// (2) exercise (act, operate)
@@ -35,14 +38,16 @@ public class NumberDifferenceTest {
 		// (3) verify (assert, check)
 		assertEquals(expected, actual);
 	}
-	
+        
+	// TC 2 : Nilai N berada di luar range  batas bawah 
+        // PJ : Andika Yudha Riyanto
 	@Test
-	public void testInputNBilDalamRange_01() {
+	public void testInputNBilLuarRange_Lower() {
 		// (1) setup (arrange, build)
 		int jumlahDeretBil;
 		boolean actual, expected;
-		jumlahDeretBil = 5; // berada pada range 1-10
-		expected = true;
+		jumlahDeretBil = 0; // bukan berada pada range 1-10
+		expected = false;
 		
 		// (2) exercise (act, operate)
 		actual = sut.validateRangeInputMaxDeret(jumlahDeretBil);

@@ -64,7 +64,7 @@ public class CalcNUmberDifference {
 	// mengembalikan true, jika nilai N sesuai dengan range
 	// // sebaliknya mengembalikan false
 	public boolean validateRangeInputMaxDeret(int nBil) {
-		if(nBil>=1 || nBil<=10) { 
+		if(nBil>=1 && nBil<=10) { 
 			return true;
 		}else {
 			return false;
